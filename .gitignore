@@ -10,5 +10,5 @@ private/
 .replit
 replit.nix
 
-content/*
-!content/.gitkeep
+#content/*              gitignore에서 제외하면 Quartz또한 파일을 무시하므로 해결하기 전까지 무작정 주석처리빼지 마시오
+#!content/.gitkeep
