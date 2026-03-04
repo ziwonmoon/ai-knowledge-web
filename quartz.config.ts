@@ -8,14 +8,15 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
-    pageTitleSuffix: "",
+    pageTitle: "문지원의 AI 공부 노트",
+    pageTitleSuffix: " - 문지원의 AI 공부 노트",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible",
+      provider: "google",
+      tagId: 'G-DQYKM0Y9EE'
     },
-    locale: "en-US",
+    locale: "ko-KR",
     baseUrl: "ziwonmoon.github.io/ai-knowledge-web",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
@@ -66,6 +67,7 @@ const config: QuartzConfig = {
         },
         keepBackground: false,
       }),
+      Plugin.HardLineBreaks(),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
