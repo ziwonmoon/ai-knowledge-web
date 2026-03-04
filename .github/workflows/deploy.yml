@@ -18,11 +18,11 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4 #= git clone
+      - uses: actions/checkout@v6 #= git clone
         with:
           fetch-depth: 0 # Fetch all history for git info
           submodules: recursive
-      - uses: actions/setup-node@v4 #= install node.js
+      - uses: actions/setup-node@v6 #= install node.js
         with:
           node-version: 22
       - name: Install Dependencies
@@ -30,7 +30,7 @@ jobs:
       - name: Build Quartz
         run: npm run build
       - name: Upload artifact #build -> (!!!artifact!!!) -> deploy
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: public
 
