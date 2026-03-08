@@ -23,6 +23,10 @@ jobs:
         with:
           fetch-depth: 0 # Fetch all history for git info
           submodules: recursive
+      - name: Update Submodule #= update submodule
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --recursive --remote
       - uses: actions/setup-node@v6 #= install node.js
         with:
           node-version: 22
